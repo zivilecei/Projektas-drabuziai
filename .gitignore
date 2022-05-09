@@ -1,0 +1,12 @@
+.idea/
+.ipynb_checkpoints/
+Digit_MNP.ipynb
+LICENSE
+ML/
+cats/
+dogs/
+kagglecatsanddogs_3367a.zip
+fruits-360-original-size.zip
+fruits-360-original-size/
+*.zip
+Untitled.ipynb
