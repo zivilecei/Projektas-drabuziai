@@ -5,3 +5,5 @@ tensorflow
 matplotlib
 tensorflow
 tensorflow_hub
+flask
+
