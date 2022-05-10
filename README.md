@@ -1,46 +1,37 @@
-## Clothing dataset
-Over 5,000 images of 20 different classes.
+## Projektas drabužiai
+
+5400 nuotraukų su 20 skirtingų kategorijų drabužiais:
 
 <img src="https://repository-images.githubusercontent.com/296936930/66951d00-fabe-11ea-823a-cfdec51c055e" /> 
 
-This dataset can be freely used for any purpose, including commercial:
 
-For example:
-* Creating a tutorial or a course (free or paid)
-* Writing a book
-* Kaggle competitions (as an external dataset)
-* Training an internal model at any company
+### Duomenys
 
-### Data
+`images.csv` failas apima:
 
-The `images.csv` file contains:
+* `image` - nuotraukos vardas
+* `sender_id` - asmens, prisidėjusio prie nuotraukos gavimo, ID
+* `label` - drabužio kategorijos pavadinimas
+* `kids` - `True`, jei drabužis yra vaikiškas
 
-* `image` - the ID of the image (use it to load the image from `images/<ID>.jpg`)
-* `sender_id` - the ID of a person who contributed the image
-* `label` - the class of the image
-* `kids` - flag, `True` if it's clothes for kids 
+### Nuoroda į duomenų rinkinį
 
-### Links
+* Daugiau informacijos apie duomenis: https://medium.com/data-science-insider/clothing-dataset-5b72cd7c3f1f
 
-* If you're looking for a subset of the clothing dataset, check here: https://github.com/alexeygrigorev/clothing-dataset-small
-* You can read more about this dataset here: https://medium.com/data-science-insider/clothing-dataset-5b72cd7c3f1f
-* This dataset is also awailable on Kaggle (with images in higher resolution): https://www.kaggle.com/agrigorev/clothing-dataset-full/ (please upvote it!)
+### Pasirinktas modelis
 
-### Top-10 subset
+Pasirinktas jau ištreniruotas modelis Mobile Net V3, nes pačios parašyti
+modeliai nedavė tokių gerų rezultatų, kaip ištreniruotas su daugybe
+duomenų modelis. Pasirinkta V3, naujausia, Mobile Net modelio versija.
+Bandytas ir V2 modelis, bet V3 buvo geresnis.
 
-Images of some classes don’t appear very often. Training a neural network to predict these classes is quite difficult — we need at least 100-200 images of each class to make a meaningful model.
+Atrinkta 10 didžiausių drabužių kategorijų. Testinių duomenų modelio 
+tikslumas apie 84%. Su 5 kategorijomis tikslumas buvo beveik 94%,
+tai pridėjus daugiau duomenų, modelis prognozuoja 10% blogiau.
 
-That’s why, for educational purposes, we created a subset of the full dataset that covers only the top-10 classes.
+#### Modelio metrikos su 10 drabužių kategorijų:
 
-Check it here: https://github.com/alexeygrigorev/clothing-dataset-small
+- Duomenys skaidomi į 15 batch'ų
+- 
 
 
-### Examples
-
-* https://www.kaggle.com/agrigorev/collage
-* [Train a self-supervised model using lightly on the clothing-dataset](https://docs.lightly.ai/tutorials/package/tutorial_simclr_clothing.html)
-* Add a link here
-
-Do you use this dataset somewhere? Please submit a PR with a link
-
-fjf
