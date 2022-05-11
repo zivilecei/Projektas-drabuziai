@@ -47,5 +47,10 @@ kelią, kuriame yra norima nuotrauka, kaip pvz: *images/dfd4079d-967b-4b3e-8574-
 
 ### Rezultatai, išvados
 
-Geriausias gautas rezultatas buvo pasiektas su Mobile Net V3 modeliu. Su 10 
+Nuo pradžių kuriami modeliai nėra tokie geri, kaip jau ištreniruoti su dideliais
+duomenų rinkiniais modeliai. Tam reikėtų labai galingo kompiuterio ir daug nuotraukų.
+
+Išbandyti keli modeliai, bet geriausias gautas rezultatas buvo pasiektas su Mobile Net V3 modeliu. Su 10 
 drabužių kategorijų gautas apie 84% tikslumas prognozuojant drabužio kategoriją.
+Su didesniu nuotraukų kiekiu kiekvienoje kategorijoje manau modelio tikslumas 
+būtų didesnis. Modelis tikrai yra tobulintinas, bet tam trūksta resursų.
