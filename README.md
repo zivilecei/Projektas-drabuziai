@@ -20,7 +20,7 @@
 
 ### Pasirinktas modelis
 
-Pasirinktas jau ištreniruotas modelis Mobile Net V3, nes pačios parašyti
+Pasirinktas jau ištreniruotas modelis *Mobile Net V3*, nes pačios parašyti
 modeliai nedavė tokių gerų rezultatų, kaip ištreniruotas su daugybe
 duomenų modelis. Pasirinkta V3, naujausia, Mobile Net modelio versija.
 Bandytas ir V2 modelis, bet V3 buvo geresnis.
@@ -31,7 +31,21 @@ tai pridėjus daugiau duomenų, modelis prognozuoja 10% blogiau.
 
 #### Modelio metrikos su 10 drabužių kategorijų:
 
-- Duomenys skaidomi į 15 batch'ų
-- 
+- Duomenys skaidomi į 15 batch'ų, dėl greitesnio modėlio treniravimo
+- Learning rate = 0.0005
+- Regularizer parametrai: L1=0, L2=0.0001
+- Dropout = 0.1
+- Paslėptas 1 sluoksnis su 32 stulpeliais
 
+###  Instrukcijos kaip pasileisti API serverį
 
+Flask_app folderyje esantis *app.py* failas paleidžiamas. Atsidaromas tinklalapis, 
+esančiame laukelyje įrašomas nuotraukos pavadinimas. Jei nuotrauka yra flask_app
+folderyje, tada užtenka tik nuotraukos pavadinimo. Aš patikrinimui naudojau modeliui
+treniruoti skirtas nuotraukas iš **images** folderio. Tokiu atveju reikia nurodyti ir 
+kelią, kuriame yra norima nuotrauka, kaip pvz: *images/dfd4079d-967b-4b3e-8574-fbac11b58103.jpg*
+
+### Rezultatai, išvados
+
+Geriausias gautas rezultatas buvo pasiektas su Mobile Net V3 modeliu. Su 10 
+drabužių kategorijų gautas apie 84% tikslumas prognozuojant drabužio kategoriją.
