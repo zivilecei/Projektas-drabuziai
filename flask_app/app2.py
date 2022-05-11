@@ -44,8 +44,6 @@ class _Preprocessor:
         return tf.image.resize_with_pad(img, IMG_HEIGHT, IMG_WIDTH)
 
 
-
-
 serving_model = tf.keras.models.load_model("clothes_model")
 
 sar=["T-Shirt", "Longsleeve", "Pants", "Shoes", "Shirt", "Dress", "Outwear", "Shorts", "Hat", "Skirt"]
@@ -53,20 +51,27 @@ IMG_HEIGHT = 224
 IMG_WIDTH = 224
 IMG_CHANNELS = 3
 
-PEOPLE_FOLDER = os.path.join('static', 'images')
+#PEOPLE_FOLDER = os.path.join('static', 'images')
 
 # Create flask app
 flask_app = Flask(__name__)
-
+#flask_app.config['UPLOAD_FOLDER'] = PEOPLE_FOLDER
 
 @flask_app.route("/")
 def Home():
-    return render_template("index.html")
+    return render_template("index2.html")
 
-@flask_app.route("/predict", methods = ["POST"])
+@flask_app.route("/about")
+def about_page():
+	return "Please subscribe  Artificial Intelligence Hub..!!!"
+
+
+#@flask_app.route("/predict", methods = ["POST"])
 def predict():
-    filename=request.form["file"]
-    img=create_preproc_image(filename)
+    filename=request.files["file"]
+    filename_path = "images/" + filename.filename
+    img=create_preproc_image(filename_path)
+
     batch_image = tf.reshape(img, [1, IMG_HEIGHT, IMG_WIDTH, IMG_CHANNELS])
     batch_pred = serving_model.predict(batch_image)
     pred = batch_pred[0]
@@ -75,9 +80,21 @@ def predict():
     prob = pred[pred_label_index]
     prob_round=round(prob*100)
 
+    return pred_label, prob_round
+#    return render_template("index2.html", prediction_text = "Drabužių kategorija yra  {} su tikimybe {}%".format(pred_label, prob_round),
+#                           img_path=img_path)
 
-    return render_template("index.html", prediction_text = "Drabužių kategorija yra  {} su tikimybe {}%".format(pred_label, prob_round))
+@flask_app.route("/submit", methods = ['GET', 'POST'])
+def get_output():
+	if request.method == 'POST':
+		imag = request.files['file']
 
+		img_path = "images/" + imag.filename
+		imag.save(img_path)
+
+		p = predict()
+
+	return render_template("index2.html", prediction = p, img_path = img_path)
 
 
 @flask_app.route("/test")
@@ -86,6 +103,3 @@ def test_ok():
 
 if __name__ == "__main__":
     flask_app.run(debug=True)
-
-
-
