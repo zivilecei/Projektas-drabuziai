@@ -40,10 +40,8 @@ tai pridėjus daugiau duomenų, modelis prognozuoja 10% blogiau.
 ###  Instrukcijos kaip pasileisti API serverį
 
 Flask_app folderyje esantis *app.py* failas paleidžiamas. Atsidaromas tinklalapis, 
-esančiame laukelyje įrašomas nuotraukos pavadinimas. Jei nuotrauka yra flask_app
-folderyje, tada užtenka tik nuotraukos pavadinimo. Aš patikrinimui naudojau modeliui
-treniruoti skirtas nuotraukas iš **images** folderio. Tokiu atveju reikia nurodyti ir 
-kelią, kuriame yra norima nuotrauka, kaip pvz: *images/dfd4079d-967b-4b3e-8574-fbac11b58103.jpg*
+esančiame laukelyje įrašomas nuotraukos pavadinimas (pvz.: *images/dfd4079d-967b-4b3e-8574-fbac11b58103.jpg*). Nuotrauka turi būti *flask_app/static/images*
+folderyje. Aš patikrinimui naudojau modeliui treniruoti skirtas nuotraukas.
 
 ### Rezultatai, išvados
 

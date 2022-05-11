@@ -53,7 +53,7 @@ IMG_HEIGHT = 224
 IMG_WIDTH = 224
 IMG_CHANNELS = 3
 
-PEOPLE_FOLDER = os.path.join('static', 'images')
+PEOPLE_FOLDER = os.path.join('static', 'static/images')
 
 # Create flask app
 flask_app = Flask(__name__)
@@ -65,7 +65,7 @@ def Home():
 
 @flask_app.route("/predict", methods = ["POST"])
 def predict():
-    filename=request.form["file"]
+    filename="static/images/" + request.form["file"]
     img=create_preproc_image(filename)
     batch_image = tf.reshape(img, [1, IMG_HEIGHT, IMG_WIDTH, IMG_CHANNELS])
     batch_pred = serving_model.predict(batch_image)
@@ -76,7 +76,8 @@ def predict():
     prob_round=round(prob*100)
 
 
-    return render_template("index.html", prediction_text = "Drabužių kategorija yra  {} su tikimybe {}%".format(pred_label, prob_round))
+    return render_template("index.html", prediction_text = "Drabužių kategorija yra  {} su tikimybe {}%".format(pred_label, prob_round),
+                           image_file=filename)
 
 
 
