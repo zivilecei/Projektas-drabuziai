@@ -14,8 +14,9 @@
 <body>
     <div class="login">
 	<h1>Drabužių kategorijos prognozė</h1>
-    <h4> Įkelkite nuotraukos pavadinimą, kaip pvz: 32b99302-cec7-4dec-adfa-3d4029674209.jpg</h4>
-    <h5>Galimos naudoti drabužių kategorijos: T-Shirt, Longsleeve, Pants, Shoes, Shirt, Dress, Outwear, Shorts, Hat, Skirt</h5>
+    <h4> Įkelkite nuotraukos pavadinimą, kaip pvz: nuotrauka.jpg</h4>
+        <h4>Nuotrauka turi būti išsaugota flask_app/static/images folderyje</h4>
+            <h5>Galimos naudoti drabužių kategorijos: T-Shirt, Longsleeve, Pants, Shoes, Shirt, Dress, Outwear, Shorts, Hat, Skirt</h5>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
