@@ -45,7 +45,7 @@ folderyje. Aš patikrinimui naudojau modeliui treniruoti skirtas nuotraukas.
 
 #![prediction](prediction.PNG)
 
-![image](https://github.com/zivilecei/Projektas-drabuziai/blob/main/prediction.PNG height="60" width="60")
+![image]("https://github.com/zivilecei/Projektas-drabuziai/blob/main/prediction.PNG" height="60" width="60")
 
 
 ### Rezultatai, išvados
