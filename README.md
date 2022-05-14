@@ -45,6 +45,9 @@ folderyje. Aš patikrinimui naudojau modeliui treniruoti skirtas nuotraukas.
 
 ![prediction](prediction.PNG)
 
+![image](https://github.com/zivilecei/Projektas-drabuziai/blob/main/prediction.PNG)
+
+
 ### Rezultatai, išvados
 
 Nuo pradžių kuriami modeliai nėra tokie geri, kaip jau ištreniruoti su dideliais
