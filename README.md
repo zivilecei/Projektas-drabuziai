@@ -26,7 +26,7 @@ Bandytas ir V2 modelis, bet V3 buvo geresnis.
 
 Atrinkta 10 didžiausių drabužių kategorijų. Testinių duomenų modelio 
 tikslumas apie 84%. Su 5 kategorijomis tikslumas buvo šiek tiek virš 93%,
-tai pridėjus daugiau duomenų, modelis prognozuoja 10% blogiau.
+tai pridėjus daugiau duomenų, modelis prognozuoja apie 10% blogiau.
 
 #### Modelio metrikos su 10 drabužių kategorijų:
 
