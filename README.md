@@ -53,4 +53,4 @@ duomenų rinkiniais modeliai. Tam reikėtų labai galingo kompiuterio ir daug nu
 Išbandyti keli modeliai, bet geriausias gautas rezultatas buvo pasiektas su Mobile Net V3 modeliu. Su 10 
 drabužių kategorijų gautas apie 84% tikslumas prognozuojant drabužio kategoriją.
 Su didesniu nuotraukų kiekiu kiekvienoje kategorijoje manau modelio tikslumas 
-būtų didesnis. Modelis tikrai yra tobulintinas, bet tam trūksta resursų.
+būtų didesnis. Modelis tikrai yra tobulintinas, bet tam trūksta resursų (daugiau nuotraukų ir galingesnio kompiuterio.).
