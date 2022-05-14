@@ -43,9 +43,9 @@ Flask_app folderyje esantis *app.py* failas paleidžiamas. Atsidaromas tinklalap
 esančiame laukelyje įrašomas nuotraukos pavadinimas (pvz.: *nuotrauka.jpg*). Nuotrauka turi būti *flask_app/static/images*
 folderyje. Aš patikrinimui naudojau modeliui treniruoti skirtas nuotraukas.
 
-![prediction](prediction.PNG)
+#![prediction](prediction.PNG)
 
-![image](https://github.com/zivilecei/Projektas-drabuziai/blob/main/prediction.PNG)
+![image](https://github.com/zivilecei/Projektas-drabuziai/blob/main/prediction.PNG height="60" width="60")
 
 
 ### Rezultatai, išvados
