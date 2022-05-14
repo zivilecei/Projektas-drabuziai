@@ -44,6 +44,7 @@ folderyje. Aš patikrinimui naudojau modeliui treniruoti skirtas nuotraukas.
 
 ![prediction](prediction.PNG)
 
+
 ### Rezultatai, išvados
 
 Nuo pradžių kuriami modeliai nėra tokie geri, kaip jau ištreniruoti su dideliais
