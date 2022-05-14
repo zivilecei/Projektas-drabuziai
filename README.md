@@ -4,10 +4,9 @@
 
 <img src="https://repository-images.githubusercontent.com/296936930/66951d00-fabe-11ea-823a-cfdec51c055e" /> 
 
-
 ### Duomenys
 
-`images.csv` failas apima:
+`images.csv` duomenų failas apima:
 
 * `image` - nuotraukos vardas
 * `sender_id` - asmens, prisidėjusio prie nuotraukos gavimo, ID
